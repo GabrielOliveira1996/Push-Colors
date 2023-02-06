@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js</title>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <style>
+
+        .bloco{
+            border: solid 1px white;
+            height: 100px;
+            width: 100px;
+            display: inline-block;
+        }
+
+        .preto{
+            background: rgb(43, 39, 39);
+        }
+
+        .verde{
+            background-color: green;
+        }
+
+        .vermelho{
+            background-color: red;
+        }
+
+        .azul{
+            background-color: blue;
+        }
+
+        .amarelo{
+            background-color: yellow;
+        }
+        
+        .d-flex{
+            display: flex;
+        }
+
+        .justify-content-center{
+            justify-content: center;
+        }
+
+        .btn-start{
+            border: solid 1px;
+            border-radius: 3px;
+            padding: 10px;
+            width: 100px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .btn-start:hover{
+            color: white;
+            background-color: rgb(47, 47, 153);
+            transition: background-color 2s;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div id="app">
+            <div class="d-flex justify-content-center">
+                <a class="btn-start" @click="iniciarRodada">Iniciar</a>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-center">
+                <div @click="compararSequencia($event)" id="verdeId" class="bloco preto" :class="verde"></div>
+                <div @click="compararSequencia($event)" id="vermelhoId" class="bloco preto" :class="vermelho"></div>
+                <div @click="compararSequencia($event)" id="azulId" class="bloco preto" :class="azul"></div>
+                <div @click="compararSequencia($event)" id="amareloId" class="bloco preto" :class="amarelo"></div>
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
