@@ -1,0 +1,138 @@
+body{
+    background-color: rgb(32, 27, 27);
+}
+
+.bloco-top-left{
+    border-top-left-radius: 100%;
+    height: 30vh;
+    width: 14vw;
+    cursor: pointer;
+    display: inline-block;
+    -webkit-box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.32);
+    -moz-box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.32);
+    box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.32);
+}
+
+.bloco-top-right{
+    border-top-right-radius: 100%;
+    height: 30vh;
+    width: 14vw;
+    cursor: pointer;
+    display: inline-block;
+    -webkit-box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.32);
+    -moz-box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.32);
+    box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.32);
+}
+
+.bloco-bottom-left{
+    border-bottom-left-radius: 100%;
+    height: 30vh;
+    width: 14vw;
+    cursor: pointer;
+    display: inline-block;
+    -webkit-box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.32);
+    -moz-box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.32);
+    box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.32);
+}
+
+.bloco-bottom-right{
+    border-bottom-right-radius: 100%;
+    height: 30vh;
+    width: 14vw;
+    cursor: pointer;
+    display: inline-block;
+    -webkit-box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.32);
+    -moz-box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.32);
+    box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.32);
+}
+
+.preto{
+    background: rgb(43, 39, 39);
+    transition: background-color 1s;
+}
+
+.verde{
+    background-color: green;
+    box-shadow: 0 0 30px green;
+    transition: background-color 1s;
+}
+
+.vermelho{
+    background-color: red;
+    box-shadow: 0 0 30px red;
+    transition: background-color 1s;
+}
+
+.azul{
+    background-color: blue;
+    box-shadow: 0 0 30px blue;
+    transition: background-color 1s;
+}
+
+.amarelo{
+    background-color: yellow;
+    box-shadow: 0 0 30px yellow;
+    transition: background-color 1s;
+}
+
+.btn-start{
+    background-color: white;
+    color: black;
+    border: solid 1px;
+    border-radius: 3px;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-start:hover{
+    color: white;
+    background-color: rgb(41, 41, 100);
+    box-shadow: 0 0 30px rgb(41, 41, 100);
+    transition: background-color 2s;
+}
+
+
+@keyframes shake {
+    0% {
+      transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+      transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+      transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+      transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+      transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+      transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+      transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+      transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+      transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+      transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+      transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+  
+.shake {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
