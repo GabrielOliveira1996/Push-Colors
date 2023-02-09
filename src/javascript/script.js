@@ -21,6 +21,7 @@ createApp({
             contadorSequeniaDeCores: 0,
             mostrandoSequencia: false,
             isShaking: false,
+            isDisabled: false, //Informa se botão está habilitado ou desabilitado.
         }
     },
     methods: {
@@ -33,10 +34,10 @@ createApp({
             this.contadorSequeniaDeCores = 0;
             this.sequencia.push(this.cores[numero]);
             this.mostrandoSequencia = true;
+            this.isDisabled = true; //Desabilita botão iniciar partida.
 
             let intervalo = setInterval(()=>{
-                //contador = this.iniciarCores();
-
+                
                 for(i=0; i<1; i++){
                     
                     if(this.sequencia[contador] == 'verde'){
@@ -151,8 +152,12 @@ createApp({
                             this.sequencia.length = 0;
                             this.sequenciaJogador.length = 0;
                             this.contadorSequeniaDeCores = 0;
-                            this.shake = true;
-                            alert('Cale-se, você é um perdedor, aceite sua derrota e volte mais forte para uma nova batalha.');
+                            this.isShaking = true;
+                            setTimeout(()=>{
+                                alert('Cale-se, você é um perdedor, aceite sua derrota e volte mais forte para uma nova batalha.');
+                                this.isDisabled = false; //Habilita botão iniciar partida.
+                            }, 1000);
+                            
                             console.log(this.sequencia);
                             console.log(this.sequenciaJogador);
                         }
@@ -195,8 +200,12 @@ createApp({
                             this.sequencia.length = 0;
                             this.sequenciaJogador.length = 0;
                             this.contadorSequeniaDeCores = 0;
-                            this.shake = true;
-                            alert('Cale-se, você é um perdedor, aceite sua derrota e volte mais forte para uma nova batalha.');
+                            this.isShaking = true;
+                            setTimeout(()=>{
+                                alert('Cale-se, você é um perdedor, aceite sua derrota e volte mais forte para uma nova batalha.');
+                                this.isDisabled = false; //Habilita botão iniciar partida.
+                            }, 1000);
+
                             console.log(this.sequencia);
                             console.log(this.sequenciaJogador);
                         }
@@ -238,8 +247,12 @@ createApp({
                             this.sequencia.length = 0;
                             this.sequenciaJogador.length = 0;
                             this.contadorSequeniaDeCores = 0;
-                            this.shake = true;
-                            alert('Cale-se, você é um perdedor, aceite sua derrota e volte mais forte para uma nova batalha.');
+                            this.isShaking = true;
+                            setTimeout(()=>{
+                                alert('Cale-se, você é um perdedor, aceite sua derrota e volte mais forte para uma nova batalha.');
+                                this.isDisabled = false; //Habilita botão iniciar partida.
+                            }, 1000);
+
                             console.log(this.sequencia);
                             console.log(this.sequenciaJogador);
                         }
@@ -281,8 +294,12 @@ createApp({
                             this.sequencia.length = 0;
                             this.sequenciaJogador.length = 0;
                             this.contadorSequeniaDeCores = 0;
-                            this.shake = true;
-                            alert('Cale-se, você é um perdedor, aceite sua derrota e volte mais forte para uma nova batalha.');
+                            this.isShaking = true;
+                            setTimeout(()=>{
+                                alert('Cale-se, você é um perdedor, aceite sua derrota e volte mais forte para uma nova batalha.');
+                                this.isDisabled = false; //Habilita botão iniciar partida.
+                            }, 1000);
+
                             console.log(this.sequencia);
                             console.log(this.sequenciaJogador);
                         }
