@@ -13,10 +13,14 @@ createApp({
             vermelho: 'preto',
             azul: 'preto',
             amarelo: 'preto',
+            do: 'src/audio/do-m1.mp3',
+            re: 'src/audio/ré-m1.mp3',
+            mi: 'src/audio/mi-m1.mp3',
+            fa: 'src/audio/fá-m1.mp3',
             pontos: 0,
             contadorSequeniaDeCores: 0,
             mostrandoSequencia: false,
-            shake: false,
+            isShaking: false,
         }
     },
     methods: {
@@ -38,6 +42,11 @@ createApp({
                     if(this.sequencia[contador] == 'verde'){
 
                         this.verde = 'verde';
+
+                        //Áudio
+                        let notaDo = new Audio(this.do);
+                        notaDo.play();
+
                         //apagar
                         this.vermelho = 'preto';
                         this.azul = 'preto';
@@ -45,6 +54,11 @@ createApp({
                     }else if(this.sequencia[contador] == 'vermelho'){
 
                         this.vermelho = 'vermelho';
+
+                        //Áudio
+                        let notaRe = new Audio(this.re);
+                        notaRe.play();
+
                         //apagar
                         this.verde = 'preto';
                         this.azul = 'preto';
@@ -52,6 +66,11 @@ createApp({
                     }else if(this.sequencia[contador] == 'azul'){
 
                         this.azul = 'azul';
+
+                        //Áudio
+                        let notaMi = new Audio(this.mi);
+                        notaMi.play();
+
                         //apagar
                         this.verde = 'preto';
                         this.vermelho = 'preto';
@@ -59,6 +78,11 @@ createApp({
                     }else if(this.sequencia[contador] == 'amarelo'){
 
                         this.amarelo = 'amarelo';
+
+                        //Áudio
+                        let notaFa = new Audio(this.fa);
+                        notaFa.play();
+
                         //apagar
                         this.verde = 'preto';
                         this.vermelho = 'preto';
@@ -86,7 +110,7 @@ createApp({
 
         },
         compararSequencia(e){
-
+            
             if(this.mostrandoSequencia === false){
 
                 if(this.sequencia.length > 0){ //adicionar checagem se as cores estão rodando, se estiver não pode clicar.
@@ -94,6 +118,10 @@ createApp({
                     if(e.target.id == 'verdeId'){
     
                         this.sequenciaJogador.push(this.cores[0]);
+                        //Áudio
+                        let notaDo = new Audio(this.do);
+                        notaDo.play();
+
                         setTimeout(()=>{
                             this.verde = 'verde';
                         }, 0);
@@ -133,6 +161,10 @@ createApp({
                     }else if(e.target.id == 'vermelhoId'){
     
                         this.sequenciaJogador.push(this.cores[1]);
+
+                        //Áudio
+                        let notaRe = new Audio(this.re);
+                        notaRe.play();
                         
                         setTimeout(()=>{
                             this.vermelho = 'vermelho';
@@ -172,6 +204,11 @@ createApp({
                     }else if(e.target.id == 'azulId'){
     
                         this.sequenciaJogador.push(this.cores[2]);
+
+                        //Áudio
+                        let notaMi = new Audio(this.mi);
+                        notaMi.play();
+
                         setTimeout(()=>{
                             this.azul = 'azul';
                         }, 0);
@@ -210,6 +247,11 @@ createApp({
                     }else if(e.target.id == 'amareloId'){
     
                         this.sequenciaJogador.push(this.cores[3]);
+
+                        //Áudio
+                        let notaFa = new Audio(this.fa);
+                        notaFa.play();
+
                         setTimeout(()=>{
                             this.amarelo = 'amarelo';
                         }, 0);
