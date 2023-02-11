@@ -15,17 +15,25 @@
     <!--MyCss-->
     <link rel="stylesheet" href="src/css/style.css">
 
+    <style>
+        .box-size{
+            height: 100vh;
+            width: 100vw;
+        }
+    </style>
 </head>
 <body>
 
     <div class="container">
 
-        <div id="app" :class="shake">
+        <div id="app">
             
+            <div :style="isShaking">
+
                 <div class="d-flex justify-content-center mt-5">
                     <button id="botaoIniciar" :disabled="isDisabled" class="btn-start col-lg-2" @click="iniciarRodada()">Iniciar</button>
                 </div>
-    
+
                 <div class="d-flex justify-content-center text-light mt-3">
                     Pontos 
                 </div>
@@ -34,27 +42,22 @@
                     {{ pontos }}
                 </div>
 
-            <hr style="color: white;">
+                <hr style="color: white;">
+
+                <div class=" d-flex justify-content-center">
+                    <div class="circulo">
         
-        
-            <div class="row d-flex justify-content-center">
-                <div class="col-2">
-                    <div @click="compararSequencia($event)" id="verdeId" class="bloco-top-left preto" :class="verde" :class="{ 'shake' : isShaking }"></div>
+                        <div @click="compararSequencia($event)" id="verdeId" class="bloco bloco-top-left preto" :class="verde"></div>
+                        <div @click="compararSequencia($event)" id="vermelhoId" class="bloco bloco-top-right preto" :class="vermelho"></div>
+                            
+                        <div @click="compararSequencia($event)" id="azulId" class="bloco bloco-bottom-left preto" :class="azul"></div>
+                        <div @click="compararSequencia($event)" id="amareloId" class="bloco bloco-bottom-right preto" :class="amarelo"></div>
+
+                    </div>
                 </div>
-                <div class="col-2">
-                    <div @click="compararSequencia($event)" id="vermelhoId" class="bloco-top-right preto" :class="vermelho" :class="{ 'shake' : isShaking }"></div>
-                </div>
+
             </div>
 
-            <div class="row d-flex justify-content-center">
-                <div class="col-2">
-                    <div @click="compararSequencia($event)" id="azulId" class="bloco-bottom-left preto" :class="azul" :class="{ 'shake' : isShaking }"></div>
-                </div>
-                <div class="col-2">
-                    <div @click="compararSequencia($event)" id="amareloId" class="bloco-bottom-right preto" :class="amarelo" :class="{ 'shake' : isShaking }"></div>
-                </div>
-            </div>
-            
         </div>
 
     </div>

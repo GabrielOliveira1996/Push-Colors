@@ -2,45 +2,54 @@ body{
     background-color: rgb(32, 27, 27);
 }
 
+.circulo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.bloco {
+    width: 49%;
+    height: 49%;
+    background-color: rgba(0,0,0,0.32);
+    position: absolute;
+}
+
 .bloco-top-left{
-    border-top-left-radius: 100%;
-    height: 30vh;
-    width: 14vw;
-    cursor: pointer;
-    display: inline-block;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 100%;;
     -webkit-box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.32);
     -moz-box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.32);
     box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.32);
 }
 
 .bloco-top-right{
+    top: 0;
+    right: 0;
     border-top-right-radius: 100%;
-    height: 30vh;
-    width: 14vw;
-    cursor: pointer;
-    display: inline-block;
     -webkit-box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.32);
     -moz-box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.32);
     box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.32);
 }
 
 .bloco-bottom-left{
+    bottom: 0;
+    left: 0;
     border-bottom-left-radius: 100%;
-    height: 30vh;
-    width: 14vw;
-    cursor: pointer;
-    display: inline-block;
     -webkit-box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.32);
     -moz-box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.32);
     box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.32);
 }
 
 .bloco-bottom-right{
+    bottom: 0;
+    right: 0;
     border-bottom-right-radius: 100%;
-    height: 30vh;
-    width: 14vw;
-    cursor: pointer;
-    display: inline-block;
     -webkit-box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.32);
     -moz-box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.32);
     box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.32);
@@ -93,10 +102,18 @@ body{
     transition: background-color 2s;
 }
 
-.shake {
-  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-  transform: translate3d(0, 0, 0);
+.box {
+  width: 80%;
+  height: 80%;
+  animation: shake 0.5s;
+  animation-iteration-count: 1;
 }
+
+.shake {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+}
+
 @keyframes shake {
   10%, 90% {
     transform: translate3d(-1px, 0, 0);

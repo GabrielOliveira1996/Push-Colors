@@ -21,7 +21,7 @@ createApp({
             contadorSequeniaDeCores: 0,
             mostrandoSequencia: false,
             isShaking: false,
-            isDisabled: false, //Informa se botão está habilitado ou desabilitado.
+            isDisabled: false, //Informa se botão iniciar está habilitado ou desabilitado.
         }
     },
     methods: {
@@ -148,13 +148,14 @@ createApp({
 
                         }else{
                             console.log('errou');
-                            this.pontos = 0;
                             this.sequencia.length = 0;
                             this.sequenciaJogador.length = 0;
                             this.contadorSequeniaDeCores = 0;
-                            this.isShaking = true;
+                            this.isShaking = 'animation: shake 1.0s cubic-bezier(.70,.20,.30,.140) both; transform: translate3d(0, 0, 0);';
                             setTimeout(()=>{
-                                alert('Cale-se, você é um perdedor, aceite sua derrota e volte mais forte para uma nova batalha.');
+                                alert(`Você perdeu, sua pontuação foi ${this.pontos}.`);
+                                this.pontos = 0;
+                                this.isShaking = false;
                                 this.isDisabled = false; //Habilita botão iniciar partida.
                             }, 1000);
                             
@@ -196,13 +197,14 @@ createApp({
                             
                         }else{
                             console.log('errou');
-                            this.pontos = 0;
                             this.sequencia.length = 0;
                             this.sequenciaJogador.length = 0;
                             this.contadorSequeniaDeCores = 0;
-                            this.isShaking = true;
+                            this.isShaking = 'animation: shake 1.0s cubic-bezier(.70,.20,.30,.140) both; transform: translate3d(0, 0, 0);';
                             setTimeout(()=>{
-                                alert('Cale-se, você é um perdedor, aceite sua derrota e volte mais forte para uma nova batalha.');
+                                alert(`Você perdeu, sua pontuação foi ${this.pontos}.`);
+                                this.pontos = 0;
+                                this.isShaking = false;
                                 this.isDisabled = false; //Habilita botão iniciar partida.
                             }, 1000);
 
@@ -243,13 +245,14 @@ createApp({
                             
                         }else{
                             console.log('errou');
-                            this.pontos = 0;
                             this.sequencia.length = 0;
                             this.sequenciaJogador.length = 0;
                             this.contadorSequeniaDeCores = 0;
-                            this.isShaking = true;
+                            this.isShaking = 'animation: shake 1.0s cubic-bezier(.70,.20,.30,.140) both; transform: translate3d(0, 0, 0);';
                             setTimeout(()=>{
-                                alert('Cale-se, você é um perdedor, aceite sua derrota e volte mais forte para uma nova batalha.');
+                                alert(`Você perdeu, sua pontuação foi ${this.pontos}.`);
+                                this.pontos = 0;
+                                this.isShaking = false;
                                 this.isDisabled = false; //Habilita botão iniciar partida.
                             }, 1000);
 
@@ -290,13 +293,14 @@ createApp({
                     
                         }else{
                             console.log('errou');
-                            this.pontos = 0;
                             this.sequencia.length = 0;
                             this.sequenciaJogador.length = 0;
                             this.contadorSequeniaDeCores = 0;
-                            this.isShaking = true;
+                            this.isShaking = 'animation: shake 1.0s cubic-bezier(.70,.20,.30,.140) both; transform: translate3d(0, 0, 0);';
                             setTimeout(()=>{
-                                alert('Cale-se, você é um perdedor, aceite sua derrota e volte mais forte para uma nova batalha.');
+                                alert(`Você perdeu, sua pontuação foi ${this.pontos}.`);
+                                this.pontos = 0;
+                                this.isShaking = false;
                                 this.isDisabled = false; //Habilita botão iniciar partida.
                             }, 1000);
 
@@ -306,7 +310,13 @@ createApp({
     
                     }
                 }else{
-    
+                    
+                    this.isShaking = 'animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both; transform: translate3d(0, 0, 0);';
+                    
+                    setTimeout(()=>{
+                        this.isShaking = false;
+                    }, 1000);
+                    
                     alert('Você ainda não iniciou o jogo.');
                 }
 
