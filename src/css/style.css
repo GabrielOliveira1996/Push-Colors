@@ -1,4 +1,4 @@
-body{
+body {
     background-color: rgb(32, 27, 27);
 }
 
@@ -19,7 +19,7 @@ body{
     position: absolute;
 }
 
-.bloco-top-left{
+.bloco-top-left {
     top: 0;
     left: 0;
     border-top-left-radius: 100%;;
@@ -28,7 +28,7 @@ body{
     box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.32);
 }
 
-.bloco-top-right{
+.bloco-top-right {
     top: 0;
     right: 0;
     border-top-right-radius: 100%;
@@ -37,7 +37,7 @@ body{
     box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.32);
 }
 
-.bloco-bottom-left{
+.bloco-bottom-left { 
     bottom: 0;
     left: 0;
     border-bottom-left-radius: 100%;
@@ -46,7 +46,7 @@ body{
     box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.32);
 }
 
-.bloco-bottom-right{
+.bloco-bottom-right {
     bottom: 0;
     right: 0;
     border-bottom-right-radius: 100%;
@@ -55,30 +55,30 @@ body{
     box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.32);
 }
 
-.preto{
+.preto {
     background: rgb(43, 39, 39);
     transition: background-color 1s;
 }
 
-.verde{
+.verde {
     background-color: green;
     box-shadow: 0 0 30px green;
     transition: background-color 1s;
 }
 
-.vermelho{
+.vermelho {
     background-color: red;
     box-shadow: 0 0 30px red;
     transition: background-color 1s;
 }
 
-.azul{
+.azul {
     background-color: blue;
     box-shadow: 0 0 30px blue;
     transition: background-color 1s;
 }
 
-.amarelo{
+.amarelo {
     background-color: yellow;
     box-shadow: 0 0 30px yellow;
     transition: background-color 1s;
@@ -95,18 +95,11 @@ body{
     text-decoration: none;
 }
 
-.btn-start:hover{
+.btn-start:hover {
     color: white;
     background-color: rgb(41, 41, 100);
     box-shadow: 0 0 30px rgb(41, 41, 100);
     transition: background-color 2s;
-}
-
-.box {
-  width: 80%;
-  height: 80%;
-  animation: shake 0.5s;
-  animation-iteration-count: 1;
 }
 
 .shake {

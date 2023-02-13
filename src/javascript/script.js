@@ -67,7 +67,7 @@ createApp({
                     }else if(this.sequencia[contador] == 'azul'){
 
                         this.azul = 'azul';
-
+                        
                         //Áudio
                         let notaMi = new Audio(this.mi);
                         notaMi.play();
@@ -79,7 +79,7 @@ createApp({
                     }else if(this.sequencia[contador] == 'amarelo'){
 
                         this.amarelo = 'amarelo';
-
+                        
                         //Áudio
                         let notaFa = new Audio(this.fa);
                         notaFa.play();
@@ -90,7 +90,7 @@ createApp({
                         this.azul = 'preto';
                     }
                     
-                    console.log(this.sequencia[contador]);
+                    //console.log(this.sequencia[contador]);
                     contador += 1;
                 }
                 
@@ -107,7 +107,7 @@ createApp({
                 }
             }, 1000);
 
-            console.log('---');
+            //console.log('---');
 
         },
         compararSequencia(e){
@@ -132,11 +132,10 @@ createApp({
                         }, 1000);
                         
                         if('verde' === this.sequencia[this.contadorSequeniaDeCores]){
-                            //emitir som da div 
-                            console.log('acertou');
+                            //console.log('acertou');
                             // testar se as entradas são iguais
-                            console.log(this.sequencia);
-                            console.log(this.sequenciaJogador);
+                            //console.log(this.sequencia);
+                            //console.log(this.sequenciaJogador);
                             this.contadorSequeniaDeCores += 1;
                             
                             if(this.contadorSequeniaDeCores === this.sequencia.length){
@@ -147,7 +146,7 @@ createApp({
                             }
 
                         }else{
-                            console.log('errou');
+                            //console.log('errou');
                             this.sequencia.length = 0;
                             this.sequenciaJogador.length = 0;
                             this.contadorSequeniaDeCores = 0;
@@ -159,8 +158,8 @@ createApp({
                                 this.isDisabled = false; //Habilita botão iniciar partida.
                             }, 1000);
                             
-                            console.log(this.sequencia);
-                            console.log(this.sequenciaJogador);
+                            //console.log(this.sequencia);
+                            //console.log(this.sequenciaJogador);
                         }
     
                         
@@ -181,11 +180,10 @@ createApp({
                         }, 1000);
     
                         if('vermelho' === this.sequencia[this.contadorSequeniaDeCores]){
-                            //emitir som da div 
-                            console.log('acertou');
+                            //console.log('acertou');
                             // testar se as entradas são iguais
-                            console.log(this.sequencia);
-                            console.log(this.sequenciaJogador);
+                            //console.log(this.sequencia);
+                            //console.log(this.sequenciaJogador);
                             this.contadorSequeniaDeCores += 1;
                             
                             if(this.contadorSequeniaDeCores === this.sequencia.length){
@@ -196,7 +194,7 @@ createApp({
                             }
                             
                         }else{
-                            console.log('errou');
+                            //console.log('errou');
                             this.sequencia.length = 0;
                             this.sequenciaJogador.length = 0;
                             this.contadorSequeniaDeCores = 0;
@@ -208,8 +206,8 @@ createApp({
                                 this.isDisabled = false; //Habilita botão iniciar partida.
                             }, 1000);
 
-                            console.log(this.sequencia);
-                            console.log(this.sequenciaJogador);
+                            //console.log(this.sequencia);
+                            //console.log(this.sequenciaJogador);
                         }
                         
                     }else if(e.target.id == 'azulId'){
@@ -229,11 +227,10 @@ createApp({
                         }, 1000);
     
                         if('azul' === this.sequencia[this.contadorSequeniaDeCores]){
-                            //emitir som da div 
-                            console.log('acertou');
+                            //console.log('acertou');
                             // testar se as entradas são iguais
-                            console.log(this.sequencia);
-                            console.log(this.sequenciaJogador);
+                            //console.log(this.sequencia);
+                            //console.log(this.sequenciaJogador);
                             this.contadorSequeniaDeCores += 1;
                             
                             if(this.contadorSequeniaDeCores === this.sequencia.length){
@@ -244,7 +241,7 @@ createApp({
                             }
                             
                         }else{
-                            console.log('errou');
+                            //console.log('errou');
                             this.sequencia.length = 0;
                             this.sequenciaJogador.length = 0;
                             this.contadorSequeniaDeCores = 0;
@@ -256,8 +253,8 @@ createApp({
                                 this.isDisabled = false; //Habilita botão iniciar partida.
                             }, 1000);
 
-                            console.log(this.sequencia);
-                            console.log(this.sequenciaJogador);
+                            //console.log(this.sequencia);
+                            //console.log(this.sequenciaJogador);
                         }
                         
                     }else if(e.target.id == 'amareloId'){
@@ -277,11 +274,10 @@ createApp({
                         }, 1000);
     
                         if('amarelo' === this.sequencia[this.contadorSequeniaDeCores]){
-                            //emitir som da div 
-                            console.log('acertou');
+                            //console.log('acertou');
                             // testar se as entradas são iguais
-                            console.log(this.sequencia);
-                            console.log(this.sequenciaJogador);
+                            //console.log(this.sequencia);
+                            //console.log(this.sequenciaJogador);
                             this.contadorSequeniaDeCores += 1;
                             
                             if(this.contadorSequeniaDeCores === this.sequencia.length){
@@ -292,7 +288,7 @@ createApp({
                             }
                     
                         }else{
-                            console.log('errou');
+                            //console.log('errou');
                             this.sequencia.length = 0;
                             this.sequenciaJogador.length = 0;
                             this.contadorSequeniaDeCores = 0;
@@ -304,25 +300,30 @@ createApp({
                                 this.isDisabled = false; //Habilita botão iniciar partida.
                             }, 1000);
 
-                            console.log(this.sequencia);
-                            console.log(this.sequenciaJogador);
+                            //console.log(this.sequencia);
+                            //console.log(this.sequenciaJogador);
                         }
     
                     }
                 }else{
                     
                     this.isShaking = 'animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both; transform: translate3d(0, 0, 0);';
-                    
                     setTimeout(()=>{
                         this.isShaking = false;
+                        alert('Você ainda não iniciou a rodada.');
                     }, 1000);
-                    
-                    alert('Você ainda não iniciou o jogo.');
+
                 }
 
+            }else{
+                this.isShaking = 'animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both; transform: translate3d(0, 0, 0);';
+                setTimeout(()=>{
+                    this.isShaking = false;
+                    alert('A sequência de cores está em andamento, aguarde terminar.');
+                }, 1000);
+                
             }
-            
-            
+ 
         }
 
     }
